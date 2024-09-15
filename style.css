@@ -144,7 +144,7 @@ nav ul.nav_menu {
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    gap: 32px;
+    /* gap: 32px; */
 
     li {
         position: relative;
@@ -272,7 +272,7 @@ nav .container {
     height: 100vh;
     background-color: #0e0e1abe;
     z-index: 10000;
-    transition: right 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .nav_screen.active {
@@ -342,6 +342,7 @@ button.close {
     gap: 10px;
     font-size: 16px;
     color: var(--text);
+    padding-top: 0;
 }
 
 .wrapper_screen li {
@@ -799,7 +800,7 @@ section.how_it_works .right {
 
         .heading img {
             width: 40px;
-            aspect-ratio: 1 / 1;
+            height: 40px;
         }
 
         h3 {
@@ -880,8 +881,12 @@ section.how_it_works .right {
 
     nav ul.nav_menu {
         display: flex;
-        gap: 10px;
     }
+
+    nav ul.nav_menu li {
+        padding: calc(var(--gap) / 2);
+    }
+
 
     .nav_screen {
         display: none;
@@ -1039,11 +1044,9 @@ section.how_it_works .right {
         }
     }
 
-    nav ul.nav_menu {
-        display: flex;
-        gap: var(--gap);
+    nav ul.nav_menu li {
+        padding: calc(var(--gap) / 2);
     }
-
 }
 
 @media only screen and (min-width: 1025px) {
@@ -1064,8 +1067,14 @@ section.how_it_works .right {
         }
     }
 
+    section.about,
+    section.features {
+        justify-content: space-between;
+    }
+
+
     section.features .tab {
-        min-height: 170px;
+        min-height: 151px;
     }
 
     section.community .card_wrapper {
@@ -1090,6 +1099,10 @@ section.how_it_works .right {
             top: 0;
             right: 0;
         }
+    }
+
+    nav ul.nav_menu li {
+        padding: 16px;
     }
 }
 
@@ -1122,17 +1135,35 @@ section.how_it_works .right {
         width: 544px;
     }
 
+    section.features .content {
+        flex: 0 0 auto;
+        width: 590px;
+    }
+
     section.about,
     section.features {
         justify-content: space-between;
     }
 
-    section.about .content,
-    section.about .content p {
+    section.about .content {
+        flex: 0 0 auto;
         width: 488px;
     }
 
+    nav ul.nav_menu li {
+        padding: 16px;
+    }
+
+    .card {
+        border-radius: 40px;
+    }
+
+    .tab.card {
+        border-radius: 32px;
+    }
 }
+
+
 
 @media only screen and (min-width: 1440px) and (max-width: 2500px) {
     section {

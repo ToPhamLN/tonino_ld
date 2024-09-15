@@ -60,3 +60,6 @@ window.addEventListener('scroll', () => {
     setCurrentMenuItem(currentIndex);
   }
 });
+
+console.log('Chiều rộng màn hình:', window.innerWidth);
+console.log('Chiều dài màn hình:', window.innerHeight);
