@@ -1170,4 +1170,8 @@ section.how_it_works .right {
         min-height: calc(100vh - 70px);
         display: flex;
     }
+
+    section.community .container {
+        padding-top: 0;
+    }
 }
